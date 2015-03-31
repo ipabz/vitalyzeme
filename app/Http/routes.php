@@ -13,3 +13,5 @@
 
 Route::get('/', 'TimelineController@index');
 Route::get('timeline/{month}', 'TimelineController@index');
+Route::get('pages/track/{topic_id}/{chapter_id}', 'TimelineController@track');
+Route::get('timeline/view_topic/{topic_id}', 'TimelineController@timeline_topic_details');

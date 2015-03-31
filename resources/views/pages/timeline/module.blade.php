@@ -28,7 +28,7 @@ if ($timeline_data != NULL) {
             	<?php
 				foreach($timeline_data['topics'][$chapter_id] as $topic) {
 				?>
-                <div class="topic"><a data-toggle="modal" data-target="#myModal" data-href="<?php print site_url('timeline/view_topic/'.$topic['topic_id']); ?>" class="thelink" ><?php print $topic['topic']; ?></a> <a data-chapter-id="<?php print $chapter_id; ?>" href="<?php print site_url('pages/track/'.$topic['topic_id'].'/'.$chapter_id); ?>" class="star glyphicon glyphicon-star<?php print $this->timeline_model->topic_done($topic['topic_id']); ?>"></a></div>
+                <div class="topic"><a data-toggle="modal" data-target="#myModal" data-href="<?php print URL::to('timeline/view_topic/'.$topic['topic_id']); ?>" class="thelink" ><?php print $topic['topic']; ?></a> <a data-chapter-id="<?php print $chapter_id; ?>" href="<?php print URL::to('pages/track/'.$topic['topic_id'].'/'.$chapter_id); ?>" class="star glyphicon glyphicon-star<?php print $timeline_model->topic_done($topic['topic_id']); ?>"></a></div>
                 <?php	
 				}
 				?>
@@ -55,7 +55,7 @@ if ($timeline_data != NULL) {
             	<?php
 				foreach($timeline_data['topics'][$chapter_id] as $topic) {
 				?>
-                <div class="topic"><a data-toggle="modal" data-target="#myModal" data-href="<?php print site_url('timeline/view_topic/'.$topic['topic_id']); ?>" class="thelink"><?php print $topic['topic']; ?></a> <a data-chapter-id="<?php print $chapter_id; ?>" href="<?php print site_url('pages/track/'.$topic['topic_id'].'/'.$chapter_id); ?>" class="star glyphicon glyphicon-star<?php print $this->timeline_model->topic_done($topic['topic_id']); ?>"></a></div>
+                <div class="topic"><a data-toggle="modal" data-target="#myModal" data-href="<?php print URL::to('timeline/view_topic/'.$topic['topic_id']); ?>" class="thelink"><?php print $topic['topic']; ?></a> <a data-chapter-id="<?php print $chapter_id; ?>" href="<?php print URL::to('pages/track/'.$topic['topic_id'].'/'.$chapter_id); ?>" class="star glyphicon glyphicon-star<?php print $timeline_model->topic_done($topic['topic_id']); ?>"></a></div>
                 <?php	
 				}
 				?>
