@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'TimelineController@index');
+Route::get('timeline/{month}', 'TimelineController@index');
